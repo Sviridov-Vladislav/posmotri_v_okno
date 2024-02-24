@@ -134,7 +134,9 @@ html {
 }
 
 .search-form__pseudo-checkbox {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 19px;
   height: 19px;
   outline: 1px solid #fff;
@@ -142,9 +144,6 @@ html {
 
 .search-form__checkbox[type="checkbox"]:checked + .search-form__pseudo-checkbox::before {
   content: " ";
-  position: absolute;
-  top: 3.5px;
-  left: 2px;
   width: 15px;
   height: 15px;
   background-color: #fff;
