@@ -13,7 +13,8 @@ ul,
 ol,
 li,
 blockquote,
-fieldset {
+fieldset,
+button {
   margin: 0;
   padding: 0;
 }
@@ -29,6 +30,9 @@ html {
 
 .page {
   margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #fff;
   font-family: 'Fira Sans Condensed', Arial, sans-serif;
   font-size: 18px;
@@ -50,17 +54,20 @@ html {
   flex-direction: column;
   justify-content: flex-end;
   width: 100%;
+  
 }
 
 .result__video-container {
   position: relative;
-  padding: 78px 0 16px;
+  min-width: 711px;
+  height: 100%;
+  margin: 78px 0 16px;
 }
 
 .result__video {
-  min-width: 711px;
-  max-height: 386px;
-  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   object-position: center;
 }
 
@@ -99,7 +106,7 @@ html {
   width: fit-content;
 }
 
-.search-form__label:hover :not(.search-form__pseudo-checkbox){
+.search-form__label:hover :not(.search-form__pseudo-checkbox, .search-form__textfield){
   text-decoration: underline;
   text-decoration-skip-ink: none;
 } 
@@ -206,6 +213,7 @@ html {
 
 .search-form__submit-button {
   min-width: 194px;
+  min-height: 34px;
 }
 
 .content__details {
@@ -214,6 +222,7 @@ html {
   justify-content: space-around;
   row-gap: 26px;
   width: 100%;
+  height: 100%;
 }
 
 .title {
@@ -230,6 +239,7 @@ html {
 }
 
 .content__list {
+  position: relative;
   max-height: 298px;
   overflow: auto;
 }
@@ -255,6 +265,10 @@ html {
 }
 
 .content__card-link:active {
+  background-color: #545050;
+}
+
+.content__card-link_current {
   background-color: #545050;
 }
 
